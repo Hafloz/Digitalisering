@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="description" content="Home page logged in">
+<meta name="keywords" content="Home page logged in database game games title year">
+    <title>Home page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!--navbar-->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TICKETMASTER</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="loggedinpage.html">Profile</a></li>
+            <li><a href="eventpage.html">Events</a></li>
+            <li><a href="home.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<!--Footer-->
+    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+		<div class="container">
+			<div class="navbar-text pull-left">
+				(â„¢)Hannes enterprise
+			</div>
+		</div>
+	</div>
+
+
+
+<div class= "container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-lg-6">
+			<h1 class="text-left">
+            <img class= "profilePicture" "img-responsive right-block" src="image/generic.png" alt="image/petter.jpg">
+            <p class="profileinfo">John Doe</p>
+            <p class="profileinfo">0702375558</p>
+            <p class="profileinfo">johnnyboy@hotmail.com</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                Send message
+            </button>
+
+            <p class = "profileinfo">Contact on Facebook <img class="facebookImage" border="0" alt="image/facebook.png" src="image/facebook.png" width="30" height="30"></p>
+
+
+
+<!--Modalstart-->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Send message</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method="post" action="contact.php">
+                  <p>
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" />
+                  </p>
+                  <p>
+                      <label for="email">Email</label>
+                      <input type="text" id="email" name="email" />
+                  </p>
+                  <p>
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="6" cols="30"></textarea>
+                  </p>
+                  <p>
+                  <input type="submit" name="send" value="Send message" />
+              </p>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of modal-->
+
+		</div>
+	</div>
+</div>
+<div id="result"></div>
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("username1");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+
+
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

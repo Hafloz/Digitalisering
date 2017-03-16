@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Register profile page">
+  <meta name="keywords" content="Register profile game database user new">
+  <title>Register profile</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+  <!--Inkluderar  navbar fÃ¶r ej inloggad-->
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home.html">TICKET STUDENTMASTER</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="loginpage.html">Log in</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-text pull-left">
+        (â„¢)Hannes enterprise
+        
+      </div>
+    </div>
+  </div>
+  <!--Script som kollar ifall fÃ¤lten Ã¤r ifyllda och ger meddelande ifall de inte Ã¤r det-->
+  <script>
+  $(document).ready(function() {
+    $('#register_form').validate({
+      rules: {
+        username: {
+          required: true,
+          minlength: 3
+        },
+        password: {
+          required: true,
+          minlength: 4
+        },
+      },
+      messages: {
+        username: {
+          required: "",
+          minlength: "You must have a minimum of 3 characters in your username"
+        },
+        password: {
+          required: "",
+          minlength: "You must have a minimum of 4 characters in your password"
+        }
+      }
+    });
+  });
+  </script>
+  <div class= "container">
+    <div class="jumbotron jumbotron2">
+
+    </div>
+
+    <!--Form fÃ¶r registrering-->
+    <div class="col-lg-12 col-md-12 col-xs-12">
+      <h1>Please register an account</h1>
+      <form method="post" action="#" id="register_form">
+        <label>Choose username: Minimum of 3 characters</label><br>
+        <input type="text" name="username" /><br><br>
+        <label>Choose password:	 Minimum of 4 charachters</label><br>
+        <input type="password" name="password"/>  <br><br>
+        <input type="submit" name="register" value="register" />
+      </form>
+    </div>
+    <!--Inkluderar fil som hÃ¤mtar upp vad anvÃ¤ndaren fyllt i formen och exekverar queryn-->
+
+
+  </div>
+  <div id="result"></div>
+  <script>
+  document.getElementById("result").innerHTML = localStorage.getItem("username");
+  </script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

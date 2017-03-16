@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="description" content="Home page logged in">
+<meta name="keywords" content="Home page logged in database game games title year">
+    <title>Home page</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<!-- NAVBAR -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TICKETMASTER</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="loggedinpage.html">Profile</a></li>
+            <li><a href="eventpage.html">Events</a></li>
+            <li><a href="home.html">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>        <!--/ skapat footer -->
+
+	<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+		<div class="container">
+			<div class="navbar-text pull-left">
+				Hannes enterprise
+			</div>
+		</div>
+	</div>
+
+
+<!--Container med innehåll-->
+<div class= "container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-lg-8">
+            <div class="jumbotron eventjumbo1">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+          Kolla in eventet!
+        </button>
+       </p>
+      </div>
+		    <!--img-responsive som anpassar bilden efter skÃ¤rmstorleken-->
+		</div>
+	</div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+            <div class="jumbotron eventjumbo2">
+                <!--Modalbutton-->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+          Kolla in eventet!
+        </button>
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Eventnamn Lediga biljetter?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+              <script>
+              function.createButton() {
+                  document.getElementById('sell').innerHTML = 'lalallal';
+              }
+            </script>
+             <p class ="modaltext" id="buy">
+              </p>
+            <button type="button" onclick="document.getElementById('buy').innerHTML = 'Du står i köpkön'">Köp</button>
+              <p class ="modaltext" id="sell">
+              </p>
+              <button type="button" onclick="document.getElementById('buy').innerHTML = '<button>Matchning!</button>'">Sälj</button>
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            <a href="www.facebook.com">
+<img class="facebookImage" border="0" alt="image/facebook.png" src="image/facebook.png" width="30" height="30">
+</a>
+        </div>
+
+        </div>
+      </div>
+    </div>
+    <!--End of modal-->
+
+      </div>
+    </div>
+</div>
+
+
+
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</html>
